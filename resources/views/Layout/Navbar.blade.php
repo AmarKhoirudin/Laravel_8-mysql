@@ -15,6 +15,9 @@
           <li class="nav-item">
             <a class="nav-link" href="{{url('/user')}}">User</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url('/students')}}">Student</a>
+          </li>
         </ul>
       </div>
     </div>
