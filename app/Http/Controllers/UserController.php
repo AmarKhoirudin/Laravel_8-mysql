@@ -4,11 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 class UserController extends Controller
 {
     public function index()
     {
+        Session::put('activeNav', 'user');
         $users = DB::table('users')->get();
         $data = [
             'user' => $users,

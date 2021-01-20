@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Student;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class StudentsController extends Controller
 {
@@ -14,6 +15,7 @@ class StudentsController extends Controller
      */
     public function index()
     {
+        Session::put('activeNav', 'student');
         $students = Student::all();
         return view('Student.index', ['students' => $students]);
     }

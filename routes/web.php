@@ -27,6 +27,7 @@ use App\Http\Controllers\StudentsController;
 
 Route::get('/', [PagesController::class, 'home']);
 Route::get('/about', [PagesController::class, 'about']);
+Route::get('/about-submit', [PagesController::class, 'aboutSubmit']);
 
 Route::get('/user', [UserController::class, 'index']);
 

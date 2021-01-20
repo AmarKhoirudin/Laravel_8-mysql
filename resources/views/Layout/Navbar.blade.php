@@ -7,16 +7,16 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{url('/')}}">Home</a>
+            <a class="nav-link {{ session('activeNav') === 'home' ? 'active' : null}}" aria-current="page" href="{{url('/')}}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{url('/about')}}">About</a>
+            <a class="nav-link {{ session('activeNav') === 'about' ? 'active' : null}}" href="{{url('/about')}}">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{url('/user')}}">User</a>
+            <a class="nav-link {{ session('activeNav') === 'user' ? 'active' : null}}" href="{{url('/user')}}">User</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{url('/students')}}">Student</a>
+            <a class="nav-link {{ session('activeNav') === 'student' ? 'active' : null}}" href="{{url('/students')}}">Student</a>
           </li>
         </ul>
       </div>
